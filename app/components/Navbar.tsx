@@ -6,11 +6,11 @@ export default function Navbar() {
   const { language, toggleLanguage } = useLanguage();
 
   return (
-    <nav style={{ background: 'linear-gradient(135deg, #8b0000 0%, #b22222 50%, #8b0000 100%)', borderBottom: '3px solid #ffd700', padding: '15px 20px', display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'sticky', top: 0, zIndex: 100 }}>
-      <button onClick={toggleLanguage} style={{ background: 'linear-gradient(90deg, #daa520, #ffd700)', color: '#4a0404', border: '1px solid rgba(139, 0, 0, 0.2)', padding: '6px 16px', borderRadius: '12px', fontFamily: 'Newsreader, serif', fontWeight: 700, cursor: 'pointer', fontSize: '15px' }}>
-        <i className="fa-solid fa-language" style={{ marginRight: '6px' }}></i>
-        {language === 'te' ? 'Read in English' : 'తెలుగులో చదవండి'}
+    <div style={{ position: 'absolute', top: '15px', right: '15px', zIndex: 100 }}>
+      <button onClick={toggleLanguage} style={{ background: 'rgba(255, 255, 255, 0.4)', backdropFilter: 'blur(6px)', color: '#5c2a2a', border: '1px solid rgba(92, 42, 42, 0.15)', padding: '5px 12px', borderRadius: '20px', fontFamily: 'Newsreader, serif', fontWeight: 600, cursor: 'pointer', fontSize: '13px', display: 'flex', alignItems: 'center', gap: '5px', boxShadow: '0 2px 5px rgba(0,0,0,0.05)' }}>
+        <i className="fa-solid fa-language"></i>
+        {language === 'te' ? 'EN' : 'తెలుగు'}
       </button>
-    </nav>
+    </div>
   );
 }
